@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Scripts JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"
+    ></script>
+    <script defer src="js/search.js"></script>
+    <script defer src="js/bookmarks.js"></script>
+    <script defer src="js/weather.js"></script>
+    <script defer src="js/todo.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="weather">
+        <div class="weather__btn--burger">☁ weather</div>
+        <div class="weather__content">
+          <button class="weather__btn--close">❌</button>
+          <img
+            class="weather__icon"
+            src="http://openweathermap.org/img/wn/04n@2x.png "
+            alt=""
+          />
+
+          <div class="weather__degrees">
+            <span class="weather__degrees-num">00.0</span>
+            <span class="weather__degrees-icon">°C</span>
+          </div>
+          <div class="weather__description">--------</div>
+          <div class="weather__date">
+            <span class="weather__date--num">00th May '00</span>
+            <br />
+            <span class="weather__date--day">Thrusday</span>
+
+            <span class="weather__date--time">00:00:00</span>
+          </div>
+          <div class="weather__wind weather__parameter">
+            <img
+              class="weather__parameter-icon"
+              src="img/weather__wind-icon.svg"
+            />
+            <span class="weather__wind-text">Wind ~00 M/S</span>
+          </div>
+          <div class="weather__hum weather__parameter">
+            <img
+              class="weather__parameter-icon"
+              src="img/weather__hum-icon.svg"
+            />
+            <span class="weather__hum-text">Hum ~00 %</span>
+          </div>
+          <div class="weather__geolocation weather__parameter">
+            <img class="weather__geolocation-icon" src="img/geolocation.svg" />
+            <span class="weather__geolocation-text">City, Country</span>
+          </div>
+          <div class="weather__line"></div>
+          <p class="weather__paragraph">Possible weather for the nexts days</p>
+          <ul class="weather__next-days">
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+            <li class="weather__next-day">
+              <div class="weather__next-day-degrees">00.0°C</div>
+              <img
+                class="weather__next-day-icon"
+                src="http://openweathermap.org/img/wn/04d@2x.png "
+              />
+              <div class="weather__next-day-date">0 Day</div>
+            </li>
+          </ul>
+          <div class="weather__preloader">
+            <div class="weather__preloader-icon"></div>
+            <div class="weather__preloader-text">
+              Loading...
+              <br />
+              For weather app work please active a geolocation and restart page
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="main">
+        <div class="main__row">
+          <form class="search-form">
+            <input
+              class="search-form__input"
+              type="search"
+              placeholder="Search"
+            />
+            <button class="search-form__button" type="submit">
+              <img
+                class="search-form__button-icon"
+                src="img/search-icon.svg"
+                alt="Search"
+              />
+            </button>
+          </form>
+          <button class="bookmarks__btn bookmarks__btn--add">
+            <svg
+              width="34"
+              height="35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 2.24561V32.7719"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M32 17.5088H2"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="bookmarks">
+          <ul class="bookmarks__list"></ul>
+        </div>
+      </main>
+
+      <div class="todo">
+        <div class="todo__btn--burger">📝 Todo</div>
+        <div class="todo__content">
+          <button class="todo__btn--close">❌</button>
+
+          <div class="todo__create">
+            <textarea
+              class="todo__create-textarea"
+              type="text"
+              placeholder="New task"
+            ></textarea>
+
+            <button class="todo__create-button">
+              <img
+                class="todo__create-button-icon"
+                src="img/todo-add-icon.svg"
+                alt="Add"
+              />
+            </button>
+          </div>
+          <ul class="todo__list"></ul>
+        </div>
+      </div>
+    </div>
+    <form class="bookmarks__form">
+      <label class="bookmarks__form-label">
+        Name
+        <input
+          class="bookmarks__form-input bookmarks__form-input--name"
+          type="text"
+        />
+      </label>
+      <label class="bookmarks__form-label">
+        Link
+        <input
+          class="bookmarks__form-input bookmarks__form-input--link"
+          type="text"
+        />
+      </label>
+
+      <button class="bookmarks__form-btn" type="submit">Save</button>
+      <button class="bookmarks__form-close">❌</button>
+    </form>
+    <div class="modal-overlay"></div>
+  </body>
+</html>
