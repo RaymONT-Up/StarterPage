@@ -33,7 +33,7 @@ const getUserWeatherInfo = async function () {
 
   // Получаем местоположение
   const ReverseGeocodingData = await fetch(
-    `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=2&appid=${APIKey}`
+    `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=2&appid=${APIKey}`
   ).then(response => response.json());
 
   // Получаем данные из API погоды
@@ -95,7 +95,7 @@ const setUserWeatherInfo = function (geoData, weatherData) {
 
   // Установка иконки
   const weatherIconCode = weatherData.current.weather[0].icon;
-  weatherIcon.src = `http://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
 
   // Установка градусов
   weatherDegrees.textContent = +weatherData.current.temp.toFixed(1);
@@ -126,7 +126,7 @@ const setUserWeatherInfo = function (geoData, weatherData) {
     </div>
     <img
       class="weather__next-day-icon"
-      src="http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png "
+      src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png "
     />
     <div class="weather__next-day-date">${date}</div>
   </li>
